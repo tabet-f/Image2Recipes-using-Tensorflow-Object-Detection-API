@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1..0, shrink-to-fit=no">
+    <meta name="description" content="Image 2 Recipes">
+    <meta name="author" content="Fadi Tabet">
+
+    <title>Image 2 Recipes AI Web App</title>
+
+    
+    <link href="static/css/thumbnail-gallery.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="static/css/sticky-footer.css" rel="stylesheet">-->
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+   
+    <!-- Custom styles for this template -->
+    <style>
+      html {
+       position: relative;
+       min-height: 100%;}
+      body {
+        padding-top: 54px;
+      }
+      @media (min-width: 992px) {
+        body {
+          padding-top: 56px;
+        }
+      }
+
+     .footer {
+  	background: #343a40;
+	position:fixed;
+	bottom: 0;
+  	width: 100%;
+  	height: 60px; 
+        z-index:9999;
+     }
+     .footer .social a {
+    	color: #ffffff;
+  	font-size: 20px;
+ 	padding: 10px;
+        width:auto;
+ 	/*border-right: 1px solid #70726F;*/
+        float:left;
+  	/*transition: all .5s ease;*/
+     }
+     /*
+     .footer a:first-child {
+        border-left: 1px solid #70726F;
+     }*/
+    .footer .social a:hover {
+     color: red;
+     }
+    
+    .footer .copyright {
+    color: #fff;
+    width:auto;
+    line-height: 40px;
+    font-size: 3.0vh;
+    position: relative;
+    float:right;
+    padding-top:10px;
+    font-family:Courier New;
+    }
+
+    .footer .copyright a{
+     float:right;
+     width:auto;
+     font-size: 1em;
+     text-decoration:none;
+     padding-left:5px;
+     color:red;
+     font-family:Courier New;
+    }
+
+    .footer .copyright a:hover{
+     color:yellow;
+     
+     }  
+   
+    .footer .b4git{
+    float:left;
+    position:relative;
+    font-size: 3.0vh;
+    line-height: 40px;
+    padding-top:10px;
+    color:#fff
+    }
+
+   pre {
+   background-color: ghostwhite;
+   border: 1px solid silver;
+   padding: 10px 20px;
+   margin: 20px; 
+   }
+   
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <!--Used to set the active class in nav anchor based on 'def name' in flask app-->
+    {% with url_name=request.endpoint %}
+       
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="http://35.227.68.237:5000/">Image 2 Recipes AI</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item{% if url_name == 'index' %} active {% endif %}">
+              <a class="nav-link" href="http://35.227.68.237:5000/">Home
+              </a>
+	    </li>
+
+              <li class="nav-item{% if url_name == 'gettraindata' %} active {% endif %}">
+              <a class="nav-link" href="http://35.227.68.237:5000/gettraindata">Train Data
+             </a>
+            </li>
+
+
+            <li class="nav-item{% if url_name == 'gettestdata' %} active {% endif %}">
+              <a class="nav-link" href="http://35.227.68.237:5000/gettestdata">Test Data
+             </a>
+            </li>
+
+
+           <li class="nav-item{% if url_name == 'getsampledata' %} active {% endif %}">
+              <a class="nav-link" href="http://35.227.68.237:5000/getsampledata">Sample Data
+             </a>
+            </li>
+
+           <li class="nav-item{% if url_name == 'getjson' %} active {% endif %}">
+              <a class="nav-link" href="http://35.227.68.237:5000/getjson">GetJSON
+             </a>
+            </li>
+
+           
+           
+          
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+ {% endwith %}
+<!-- Navigation -->
+
+
+   
+                
+
+
+
+<!--footer-->
+ <footer class="footer">
+    <div class="container">
+    <p class="copyright">Developed by <a href="https://github.com/tabet-f" target="_blank">Fadi Tabet</a></p>
+    <p class="b4git">Fork it</p><span class="social"><a href="https://github.com/tabet-f/Image2Recipes-using-Tensorflow-Object-Detection-API" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a></span>
+   
+    </div>
+ </footer>
+<!--footer-->
+
+
+
+
+<!-- Bootstrap core JavaScript -->
+    <script src="static/jquery/jquery.min.js"></script>
+    <script src="static/bootstrap/js/bootstrap.bundle.min.js"></script>
+   
+<script>
+
+
+
+</script>
+
+
+  </body> 
+</html>
