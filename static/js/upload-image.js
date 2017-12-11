@@ -1,0 +1,87 @@
+/*jslint browser: true, white: true, eqeq: true, plusplus: true, sloppy: true, vars: true*/
+/*global $, console, alert, FormData, FileReader*/
+
+
+function noPreview() {
+  $('#image-preview-div').css("display", "none");
+  $('#preview-img').attr('src', 'noimage');
+  $('upload-button').attr('disabled', '');
+}
+
+function selectImage(e) {
+  $('#file').css("color", "green");
+  $('#image-preview-div').css("display", "block");
+  $('#preview-img').attr('src', e.target.result);
+  $('#preview-img').css('max-width', '300px');
+  $('#preview-img').css('max-width', '300px');
+}
+
+$(document).ready(function (e) {
+
+  var maxsize = 500 * 1024; // 500 KB
+
+  $('#max-size').html((maxsize/1024).toFixed(2));
+
+  $('#upload-image-form').on('submit', function(e) {
+
+   
+     
+    $('#message').empty();
+    $('#loading').show();
+    
+    $('.show_spinner').show();
+
+    $.ajax({
+      url: "http://localhost:5000/",
+      type: "POST",
+      data: new FormData(this),
+      contentType: true,
+      cache: false,
+      processData: false,
+      success: function(data)
+      {
+        $('#loading').hide();
+        $('#message').html(data);
+        $('.show_spinner').hide();
+       
+     
+      }
+    });
+
+  });
+
+  $('#file').change(function() {
+
+    $('#message').empty();
+
+    var file = this.files[0];
+    var match = ["image/jpeg","image/jpg"];
+
+    if ( !( (file.type == match[0]) || (file.type == match[1]) ) )
+    {
+      noPreview();
+
+      $('#message').html('<div class="alert alert-warning" role="alert">Invalid image format. Allowed format: JPG</div>');
+
+      return false;
+    }
+
+    if ( file.size > maxsize )
+    {
+      noPreview();
+
+      $('#message').html('<div class=\"alert alert-danger\" role=\"alert\">The size of image you are attempting to upload is ' + (file.size/1024).toFixed(2) + ' KB, maximum size allowed is ' + (maxsize/1024).toFixed(2) + ' KB</div>');
+
+      return false;
+    }
+
+    $('#upload-button').removeAttr("disabled");
+
+    var reader = new FileReader();
+    reader.onload = selectImage;
+    reader.readAsDataURL(this.files[0]);
+
+  });
+
+});
+
