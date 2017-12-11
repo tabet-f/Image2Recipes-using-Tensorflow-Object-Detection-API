@@ -1,0 +1,65 @@
+{
+    "_agg": "js2dict",
+    "_appName": "Image 2 Recipes AI Web App",
+    "_author": "Fadi Tabet",
+    "_build": "1.02.1",
+    "_matching": "Works Only on Full Match",
+    "_updated": "12-09-2017",
+    "recipes": [
+        {
+            "id": 1,
+            "image": "http://www.melaniecooks.com/wp-content/uploads/2011/06/salad-tomatoes-cucumbers-lettuce.jpg",
+            "ingredients": [
+                "tomato",
+                "cucumber",
+                "lettuce"
+            ],
+            "instructions": [
+                "inst 1",
+                "inst 2",
+                "inst 3"
+            ],
+            "link": "http://www.melaniecooks.com/salad-recipe-with-lettuce-tomatoes-and-cucumbers/1706/",
+            "preparation time": "10 min",
+            "title": "Salad"
+        },
+        {
+            "id": 2,
+            "image": "url_of_image",
+            "ingredients": [
+                "egg",
+                "bacon",
+                "cheese",
+                "bread"
+            ],
+            "instructions": [
+                "inst 1",
+                "inst 2",
+                "inst 3",
+                "inst 4"
+            ],
+            "link": "linkgoeshere",
+            "preparation time": "43 min",
+            "title": "My Second Recipe"
+        },
+        {
+            "id": 3,
+            "image": "url_of_image",
+            "ingredients": [
+                "milk",
+                "sugar",
+                "flour",
+                "chocolate chips"
+            ],
+            "instructions": [
+                "inst 1",
+                "inst 2",
+                "inst 3",
+                "inst 4"
+            ],
+            "link": "linkgoeshere",
+            "preparation time": "43 min",
+            "title": "My Third Recipe"
+        }
+    ]
+}
