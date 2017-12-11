@@ -1,4 +1,6 @@
 #PATHS MUST BE CONFIGURED BASED ON YOUR IMPLEMENTATION
+#AUTHOR: FADI TABET 
+
 import sys
 import os
 from flask import Flask, session render_template, send_from_directory, request, Response, redirect,url_for,jsonify
