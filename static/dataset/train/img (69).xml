@@ -1,0 +1,26 @@
+<annotation>
+	<folder>ImgDT3</folder>
+	<filename>img (69).jpg</filename>
+	<path>/home/blinders/Desktop/ImgDT3/img (69).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>320</width>
+		<height>228</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>tomato</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>99</xmin>
+			<ymin>101</ymin>
+			<xmax>225</xmax>
+			<ymax>183</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>ImgDT3</folder>
+	<filename>img (22).jpg</filename>
+	<path>/home/blinders/Desktop/ImgDT3/img (22).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>310</width>
+		<height>163</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>lettuce</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>81</xmin>
+			<ymin>7</ymin>
+			<xmax>228</xmax>
+			<ymax>138</ymax>
+		</bndbox>
+	</object>
+</annotation>
