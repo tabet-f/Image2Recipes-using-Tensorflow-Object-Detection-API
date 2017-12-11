@@ -1,3 +1,4 @@
+#PATHS MUST BE CONFIGURED BASED ON YOUR IMPLEMENTATION
 import sys
 import os
 from flask import Flask, session render_template, send_from_directory, request, Response, redirect,url_for,jsonify
@@ -171,7 +172,7 @@ def index():
          print('>>> filename [',filename,'] uploaded successfully')
          upload_file.save(os.path.join(UPLOAD_FOLDER, 'image1.jpg'))
          image_size=128
-         #TF Deployment Start
+         #TF Deployment Start******************
          num_channels=3
          images = []
          MODEL_NAME = 'tngGRAPH' #your model dir
@@ -221,7 +222,7 @@ def index():
                 (boxes, scores, classes, num) = sess.run(
                   [detection_boxes, detection_scores, detection_classes, num_detections],
                   feed_dict={image_tensor: image_np_expanded})
-    
+     
 
                 #get the unique objects with no scores
                 i=0
@@ -242,7 +243,7 @@ def index():
                       objectsnscores.append(ingnscore)
                       j+=1 
  
-
+             #TF Deployment ENDS******************
              # Visualization of the results of a detection. you can use matplotlib
             vis_util.visualize_boxes_and_labels_on_image_array(
             image_np,
