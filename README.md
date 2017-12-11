@@ -1,3 +1,3 @@
-# Image2Recipes-using-Tensorflow-Object-Detection-API
+# Image2Recipes: Tensorflow Object Detection API deployed in Flask Web Application
 
-#Coming Soon!
+# Coming Soon!
