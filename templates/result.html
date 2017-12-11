@@ -1,0 +1,58 @@
+<!--Include the base template-->
+{% include "basetemplate.html" %}
+
+ <div class="container">
+
+      <div style="max-width: 650px; margin: auto;">
+        <h1 class="page-header">Image 2 Recipes AI</h1>
+        <center><p class="lead">TensorFlow Output:</p></center>
+
+          <img class="img-fluid img-rounded" src="{{url_for('static', filename='tfOutput.jpg')}}" />
+   <br/><br/>
+  <div class="panel-group">
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse1">Unique Detected Objects</a>
+<i class="fa fa-question-circle pull-right"></i>
+      </h4>
+
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
+      <ul class="list-group">
+{% for x in response %}
+        <li class="list-group-item">{{ x }}</li>
+ {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div> 
+
+<br/>
+
+
+<div class="panel-group">
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse2">Detected Objects with Scores > 50%</a>
+<i class="fa fa-question-circle pull-right"></i>
+      </h4>
+
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <ul class="list-group">
+{% for x in objwithscore %}
+        <li class="list-group-item">{{ x.split('_') }}</li>
+ {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div> 
+
+<br/><br/>
+<input type="button" class="btn btn-primary btn-block" value="Where's my Recipe?" onclick="location.href='\getrecipes';">    
+       
+</div></div><br/><br/><br/>
+<!-- Page Content -->
+   

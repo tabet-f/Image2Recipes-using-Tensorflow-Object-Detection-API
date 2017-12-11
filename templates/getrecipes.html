@@ -1,0 +1,71 @@
+<!--Include the base template-->
+{% include "basetemplate.html" %}
+
+    <div class="container">
+
+      <div style="max-width: 650px; margin: auto;">
+        <h1 class="page-header">Image 2 Recipes AI</h1>
+        
+
+
+<!--Get FullMatch Dict length-->
+{% set count = data.get('totalFullMatchRecipes') %}
+
+<!--Check if we have any match by checking if the dict is empty (nomatch) or we have some result (match)-->
+{% if count|int > 0 %}
+
+<center><p class="lead">Voila! Your Recipe(s) Is/Are:</p></center>
+
+<!--Extract the results and show them-->
+ {% for i in range(count) %}
+ 
+ <ul>
+ <h4>Recipe #{{i+1}}</h4>
+ 
+ {% set pre = ["id_",i+1] %}
+ {% set key = pre|join %}
+ <li><strong>Recipe id: </strong>{{data.get(key)}}</li>
+
+ {% set pre = ["title_",i+1] %}
+ {% set key = pre|join %}
+ <li><strong>Recipe Title: </strong>{{data.get(key)}}</li>
+
+ {% set pre = ["preparation time_",i+1] %}
+ {% set key = pre|join %}
+ <li><strong>Preparation Time: </strong>{{data.get(key)}}</li>
+
+ {% set pre = ["instructions_",i+1] %}
+ {% set key = pre|join %}
+ <li><strong>Instructions: </strong>{{data.get(key)}}</li>
+
+ {% set pre = ["ingredients_",i+1] %}
+ {% set key = pre|join %}
+ <li><strong>Ingredients: </strong>{{data.get(key)}}</li>
+
+ {% set pre = ["link_",i+1] %}
+ {% set key = pre|join %}
+ <li><strong>Recipe Link: </strong><a href="{{data.get(key)}}" target="blank">Recipe Tutorial Link</a></li>
+
+ {% set pre = ["image_",i+1] %}
+ {% set key = pre|join %}
+ <li><strong>Image: </strong></li><img src="{{data.get(key)}}" class="img-fluid" width="350" height="350" alt="Responsive image">
+
+ 
+ </ul>
+ <br/>
+    
+   {% endfor %}
+
+
+{% else %}
+<center><p class="lead">Sorry dude!</p></center>
+<img class="img-fluid img-rounded" src="/static/img/noresult.png" alt="No result found" />
+
+{% endif %}
+
+
+       
+</div></div><br/><br/><br/>
+<!-- Page Content -->
+   
+   

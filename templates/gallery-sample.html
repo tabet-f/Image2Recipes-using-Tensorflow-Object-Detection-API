@@ -1,0 +1,23 @@
+<!--Include the base template-->
+{% include "basetemplate.html" %}
+
+
+<!-- Page Content -->
+<div class="container">
+<h1 class="my-4 text-center text-lg-left">Sample Images</h1>
+<center>
+<p class="lead"><span style="color:red">Includes:</span> {{images|length}} Images NOT Included Neither in Train Nor in Test Dataset<br/>
+<span style="color:red">Last Update:</span> December 02, 2017</p></center>
+      <div class="row text-center text-lg-left">
+
+ {% for image in images %}
+        <div class="col-lg-3 col-md-4 col-xs-6">
+        <a download="image2recipesAI-{{image}}" href="{{ url_for('static', filename='dataset/sample/' + image) }}" title="Demo Image">
+         <img class="img-fluid img-thumbnail" src="{{ url_for('static', filename='dataset/sample/' + image) }}">
+        </a>
+        </div>
+{% endfor %}
+       </div>
+      </div>     
+<br/><br/><br/>
+<!-- Page Content -->
