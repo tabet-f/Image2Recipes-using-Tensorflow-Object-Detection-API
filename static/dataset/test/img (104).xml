@@ -1,0 +1,26 @@
+<annotation>
+	<folder>ImgDT3</folder>
+	<filename>img (104).jpg</filename>
+	<path>/home/blinders/Desktop/ImgDT3/img (104).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>284</width>
+		<height>177</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>cucumber</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>6</xmin>
+			<ymin>5</ymin>
+			<xmax>276</xmax>
+			<ymax>170</ymax>
+		</bndbox>
+	</object>
+</annotation>
