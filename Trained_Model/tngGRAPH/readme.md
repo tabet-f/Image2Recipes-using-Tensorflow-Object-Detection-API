@@ -1,1 +1,1 @@
-Custom trained model based on SSD Mobilenet V1 Model
+SSD Mobilenet V1 Model trained on custom images
