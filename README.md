@@ -4,4 +4,4 @@ You must clone this repo inside <a href="https://github.com/tensorflow/models/tr
 
 # Description Coming Soon!
 
-<img src="http://gifmaker.me/PlayGIFAnimation.php?folder=2017121515p8o3iVdlTBVSNcBW8tP8is&file=output_CDOJvu.gif" alt="">
+<img src="http://static.adweek.com/adweek.com-prod/wp-content/uploads/2017/03/dominos-surfing-PAGE-2017.gif" alt="">
