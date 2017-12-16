@@ -4,4 +4,4 @@ You must clone this repo inside <a href="https://github.com/tensorflow/models/tr
 
 # GIF Demo
 
-<img src="http://static.adweek.com/adweek.com-prod/wp-content/uploads/2017/03/dominos-surfing-PAGE-2017.gif" alt="">
+<img src="https://raw.githubusercontent.com/tabet-f/Image2Recipes-using-Tensorflow-Object-Detection-API/master/GIFdemo/image2recipesDEMO.gif" alt="">
