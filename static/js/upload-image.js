@@ -13,7 +13,6 @@ function selectImage(e) {
   $('#image-preview-div').css("display", "block");
   $('#preview-img').attr('src', e.target.result);
   $('#preview-img').css('max-width', '300px');
-  $('#preview-img').css('max-width', '300px');
 }
 
 $(document).ready(function (e) {
